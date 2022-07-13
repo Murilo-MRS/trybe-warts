@@ -17,3 +17,18 @@ function checaLogin() {
 }
 
 checaLogin();
+
+function btnEnviar() {
+  const btnSubmit = document.getElementById('submit-btn');
+  const checkBox = document.getElementById('agreement');
+
+  checkBox.addEventListener('change', () => {
+    console.log('mudou');
+    if (btnSubmit.disabled === true) {
+      btnSubmit.disabled = false;
+    } else {
+      btnSubmit.disabled = true;
+    }
+  });
+}
+btnEnviar();
