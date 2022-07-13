@@ -32,3 +32,12 @@ function btnEnviar() {
   });
 }
 btnEnviar();
+
+function textCounter() {
+  const textArea = document.getElementById('textarea');
+  textArea.addEventListener('keyup', () => {
+    const counter = document.getElementById('counter');
+    counter.innerText = 500 - textArea.textLength;
+  });
+}
+textCounter();
