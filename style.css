@@ -21,3 +21,7 @@ main {
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+.form-container {
+  display: flex;
+}
