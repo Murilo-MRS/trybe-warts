@@ -41,15 +41,11 @@ main {
   flex-wrap: wrap;
 }
 
-.conteudo-checkbox div{
+.conteudo-checkbox div {
   width: 30%;
 }
 
 .turma-container {
   display: flex;
   flex-flow: row;
-}
-
-#form-data {
-  display: none;
 }
