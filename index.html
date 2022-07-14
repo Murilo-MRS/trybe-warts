@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title>Trybewarts</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header mb-3">
       <img
         class="trybewarts-header-logo"
         src="images/trybewarts-header-logo.svg"
@@ -16,25 +17,26 @@
       />
       <h1 id="trybewarts-header-title">Trybewarts</h1>
       <form class="trybewarts-login" action="">
-        <input type="email" name="email" id="inputEmail" placeholder="Email" />
-        <input
+        <input class="form-control  me-3" type="email" name="email" id="inputEmail" placeholder="Email" />
+        <input class="form-control  me-3"
           type="password"
           name="password"
           id="inputSenha"
           placeholder="Senha"
         />
-        <button id="entrar">Entrar</button>
+        <button class="btn btn-secondary" id="entrar">Entrar</button>
       </form>
     </header>
     <main>
       <form action="" id="evaluation-form">
-        <div class="form-container">
-          <input type="text" id="input-name" placeholder="Nome" />
-          <input type="text" id="input-lastname" placeholder="Sobrenome" />
+        <h2>Formulário de Avaliação</h2>
+        <div class="form-container mb-3">
+          <input class="form-control" type="text" id="input-name" placeholder="Nome" />
+          <input class="form-control" type="text" id="input-lastname" placeholder="Sobrenome" />
         </div>
-        <div class="form-container">
-          <input type="text" id="input-email" placeholder="Email" />
-          <select name="house" id="house">
+        <div class="form-container mb-3">
+          <input type="text" class="form-control" id="input-email" placeholder="Email" />
+          <select class="form-select" name="house" id="house">
             <option id="gitnoria-house" value="Gitnória">Gitnória</option>
             <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
             <option id="corvinode-house" value="Corvinode">Corvinode</option>
@@ -44,47 +46,47 @@
         <!-- radio buttons -->
         <div class="turma-container">
             <div class="familia-container">
-                <label for="" id="label-family">Qual sua família?</label>
+                <label class="form-label" for="" id="label-family">Qual sua família?</label>
                 <div>
                     <input type="radio" name="family" id="frontend" value="Frontend" />
-                    <label for="frontend">Família Frontend</label>
+                    <label class="form-label" for="frontend">Família Frontend</label>
                 </div>
                 <div>
                     <input type="radio" name="family" id="backend" value="Backend" />
-                    <label for="backend">Família Backend</label>
+                    <label class="form-label" for="backend">Família Backend</label>
                 </div>
                 <div>
                     <input type="radio" name="family" id="fullstack" value="FullStack" />
-                    <label for="fullstack">Família FullStack</label>
+                    <label class="form-label" for="fullstack">Família FullStack</label>
                 </div>
             </div>
             <!-- checkbox -->
             <div class="conteudo-container">
-                <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+                <label class="form-label" for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
                 <div class="conteudo-checkbox">
                     <div>
-                        <input type="checkbox" name="" id="hofs" class="subject" value="HoFs">
-                        <label for="hofs">HoFs</label>
+                        <input type="checkbox" name="" id="hofs" class="subject form-check-input" value="HoFs">
+                        <label class="form-label" for="hofs">HoFs</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="jest" class="subject" value="Jest">
-                        <label for="jest">Jest</label>
+                        <input type="checkbox" name="" id="jest" class="subject form-check-input" value="Jest">
+                        <label class="form-label" for="jest">Jest</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="promises" class="subject" value="Promises">
-                        <label for="promises">Promises</label>
+                        <input type="checkbox" name="" id="promises" class="subject form-check-input" value="Promises">
+                        <label class="form-label" for="promises">Promises</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="react" class="subject" value="React">
-                        <label for="react">React</label>
+                        <input type="checkbox" name="" id="react" class="subject form-check-input" value="React">
+                        <label class="form-label" for="react">React</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="sql" class="subject" value="SQL">
-                        <label for="sql">SQL</label>
+                        <input type="checkbox" name="" id="sql" class="subject form-check-input" value="SQL">
+                        <label class="form-label" for="sql">SQL</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="" id="python" class="subject" value="Python">
-                        <label for="python">Python</label>
+                        <input type="checkbox" name="" id="python" class="subject form-check-input" value="Python">
+                        <label class="form-label" for="python">Python</label>
                     </div>
                 </div>
             </div>
@@ -92,29 +94,34 @@
         <!-- avaliação -->
         <div class="nota-container">
             <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
-            <label for="nota-1">1</label>
-            <input id="nota-1" name="rate" type="radio" value="1">
-            <label for="nota-2">2</label>
-            <input id="nota-2" name="rate" type="radio" value="2">
-            <label for="nota-3">3</label>
-            <input id="nota-3" name="rate" type="radio" value="3">
-            <label for="nota-4">4</label>
-            <input id="nota-4" name="rate" type="radio" value="4">
-            <label for="nota-5">5</label>
-            <input id="nota-5" name="rate" type="radio" value="5">
-            <label for="nota-6">6</label>
-            <input id="nota-6" name="rate" type="radio" value="6">
-            <label for="nota-7">7</label>
-            <input id="nota-7" name="rate" type="radio" value="7">
-            <label for="nota-8">8</label>
-            <input id="nota-8" name="rate" type="radio" value="8">
-            <label for="nota-9">9</label>
-            <input id="nota-9" name="rate" type="radio" value="9">
-            <label for="nota-10">10</label>
-            <input id="nota-10" name="rate" type="radio" value="10">
+            <div>
+              <input class="form-check-input" id="nota-1" name="rate" type="radio" value="1">
+              <label class="form-label" for="nota-1">1</label>
+              <input class="form-check-input" id="nota-2" name="rate" type="radio" value="2">
+              <label class="form-label" for="nota-2">2</label>
+              <input class="form-check-input" id="nota-3" name="rate" type="radio" value="3">
+              <label class="form-label" for="nota-3">3</label>
+              <input class="form-check-input" id="nota-4" name="rate" type="radio" value="4">
+              <label class="form-label" for="nota-4">4</label>
+              <input class="form-check-input" id="nota-5" name="rate" type="radio" value="5">
+              <label class="form-label" for="nota-5">5</label>
+              <input class="form-check-input" id="nota-6" name="rate" type="radio" value="6">
+              <label class="form-label" for="nota-6">6</label>
+              <input class="form-check-input" id="nota-7" name="rate" type="radio" value="7">
+              <label class="form-label" for="nota-7">7</label>
+              <input class="form-check-input" id="nota-8" name="rate" type="radio" value="8">
+              <label class="form-label" for="nota-8">8</label>
+              <input class="form-check-input" id="nota-9" name="rate" type="radio" value="9">
+              <label class="form-label" for="nota-9">9</label>
+              <input class="form-check-input" id="nota-10" name="rate" type="radio" value="10">
+              <label class="form-label" for="nota-10">10</label>
+            </div>
         </div>
-        <label class="textarea" for="textarea">Deixe seu comentário:</label>
-        <textarea name="" id="textarea" cols="30" rows="10" maxlength="500"></textarea>
+
+        <div class="form-floating">
+          <textarea class="form-control" name="" id="textarea" cols="30" rows="10" maxlength="500"></textarea>
+          <label class="textarea" for="textarea">Deixe seu comentário:</label>
+        </div>
         <span id="counter">500</span>
 
         <!-- termos -->
@@ -123,7 +130,7 @@
           <input type="checkbox" name="" id="agreement" required>
         </div>
 
-        <button type="submit" id="submit-btn" disabled>Enviar</button>
+        <button class="btn btn-primary" type="submit" id="submit-btn" disabled>Enviar</button>
       </form>
       <form id="form-data">
       </form>
