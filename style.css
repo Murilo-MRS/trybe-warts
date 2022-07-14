@@ -25,3 +25,31 @@ main {
 .form-container {
   display: flex;
 }
+
+.familia-container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+}
+
+.conteudo-container {
+  width: 50%;
+}
+
+.conteudo-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.conteudo-checkbox div{
+  width: 30%;
+}
+
+.turma-container {
+  display: flex;
+  flex-flow: row;
+}
+
+#form-data {
+  display: none;
+}

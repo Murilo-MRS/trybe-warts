@@ -32,3 +32,65 @@ function btnEnviar() {
   });
 }
 btnEnviar();
+
+function textCounter() {
+  const textArea = document.getElementById('textarea');
+  textArea.addEventListener('keyup', () => {
+    const counter = document.getElementById('counter');
+    counter.innerText = 500 - textArea.textLength;
+  });
+}
+textCounter();
+
+function mostarDados() {
+  const btnEnviarForm = document.getElementById('submit-btn');
+
+  btnEnviarForm.addEventListener('click', (event) => {
+    event.preventDefault();
+    criarElementos();
+
+    const nome = document.getElementById('input-name').value;
+    const lastName = document.getElementById('input-lastname').value;
+    const fullName = `${nome} ${lastName}`;
+    const email = document.getElementById('input-email').value;
+    const casa = document.getElementById('house').value;
+    const familia = document.querySelector('input[name="family"]:checked').value;
+    const materias = document.querySelectorAll('.subject:checked');
+    const nota = document.querySelector('[name="rate"]:checked').value;
+    const obs = document.getElementById('textarea').value;
+    const arrayDados = [fullName, email, casa, familia, materias, nota, obs];
+    inserirDados(arrayDados);
+  });
+}
+
+function criarElementos() {
+  for (let index = 0; index < 7; index += 1) {
+    const elementoFilho = document.createElement('p');
+    const formData = document.getElementById('form-data');
+
+    formData.appendChild(elementoFilho);
+  }
+}
+
+mostarDados();
+
+function inserirDados(dados) {
+  const listaElementos = document.querySelector('#form-data').children;
+  let materias = ''
+  listaElementos[0].innerText = `Nome: ${dados[0]}`;
+  listaElementos[1].innerText = `Email: ${dados[1]}`;
+  listaElementos[2].innerText = `Casa: ${dados[2]}`;
+  listaElementos[3].innerText = `Família: ${dados[3]}`;
+  listaElementos[5].innerText = `Avaliação: ${dados[5]}`;
+  listaElementos[6].innerText = `Observações: ${dados[6]}`;
+
+  for (let index = 0; index < dados[4].length; index += 1){
+    materias += `${dados[4][index].value}, `;
+  }
+  listaElementos[4].innerText = `Matérias: ${materias}`;
+
+  const limparMain = document.querySelector('#evaluation-form');
+  const listaElementosHTML = document.querySelector('#form-data')
+  limparMain.innerHTML = listaElementosHTML.innerHTML;
+  
+}
